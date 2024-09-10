@@ -1,0 +1,6 @@
+*.o
+*.obj
+/oxywitleaf2csv
+/oxywitleaf2csv.exe
+/.Rhistory
+/*.png
