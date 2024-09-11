@@ -4,7 +4,7 @@
 The simple program is a Witleaf handheld pulse oxymeter BIN file format data decoder. It reads BIN-files produced by popular professional pulse oxymeters manufactured by Shenzhen Witleaf Medical Electronics Co., Ltd. (like the WIT-S300 shown in the photo on the right) and produces a CSV-formatted output with the extracted data to stdout (gets printed to the console if not directed otherwise).
 
 ## Requirements
- - [Digital Mars D compiler (DMD)](https://dlang.org/download.html) - required to build the BNI->CSV converter itself.
+ - [Digital Mars D compiler (DMD)](https://dlang.org/download.html) - required to build the BIN->CSV converter itself.
  - [R](https://www.r-project.org/) - is used to create the graphical plots.
 
 All the required R dependancies (`plotrix` and `Cairo`) should get downloaded and installed automatically.
