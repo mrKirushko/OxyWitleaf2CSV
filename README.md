@@ -1,4 +1,5 @@
-# OxyWitleaf2CSV <img src="./README_md_pictures/witleaf.png"  align="right" height="138" />
+
+# OxyWitleaf2CSV <img src="README_md_pictures/witleaf.png" align="right" height="138" />
 
 The simple program is a Witleaf handheld pulse oxymeter BIN file format data decoder. It reads BIN-files produced by popular professional pulse oxymeters manufactured by Shenzhen Witleaf Medical Electronics Co., Ltd. (like the WIT-S300 shown in the photo above) and produces a CSV-formatted output with the extracted data to stdout (gets printed to the console if not directed otherwise).
 
