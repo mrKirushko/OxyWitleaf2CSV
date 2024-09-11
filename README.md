@@ -1,4 +1,5 @@
-# OxyWitleaf2CSV <img src="./README_md_pictures/witleaf.png" height="200" align="right" />
+# OxyWitleaf2CSV <img src="./README_md_pictures/witleaf.png"  align="right" height="138" />
+
 The simple program is a Witleaf handheld pulse oxymeter BIN file format data decoder. It reads BIN-files produced by popular professional pulse oxymeters manufactured by Shenzhen Witleaf Medical Electronics Co., Ltd. (like the WIT-S300 shown on the photo on the right) and produces a CSV-formatted output with the extracted data to stdout (gets printed to the console if not directed otherwise).
 
 ## Requirements
@@ -13,7 +14,7 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
    
   - If you use Linux or some other UNIX-like OS:
   
-  Open a command line in the OxyWitleaf2CSV project directory and enter the following command
+  Open a system shell in the OxyWitleaf2CSV project directory and enter the following command:
   ``` bash   
   ./build.sh
   ```
@@ -29,7 +30,7 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
     
    - If you use Linux or some other UNIX-like OS:
 
-  Open a command line in the OxyWitleaf2CSV project directory and enter the following command replacing "patient_name" with your BIN-file name:
+  Open a system shell in the OxyWitleaf2CSV project directory and enter the following command replacing "patient_name" with your BIN-file name:
    
   ``` bash
   ./oxywitleaf2csv -H -f patient_name.bin > patient_name.csv
@@ -38,9 +39,9 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
     
    - If you use Windows: 
   
-  Rename the file to `patient.bin` and execute `process.bat` file. 
+  Rename the file you just got from the devie to `patient.bin` and execute `process.bat` file. 
   
-  Then open "R Console", set current directory to your OxyWitleaf2CSV project directory. 
+  Then open "R Console" and set current directory to your OxyWitleaf2CSV project directory using the top menu or "setwd()" function. 
   
   Enter the following command into the console:
   ``` R
@@ -55,7 +56,7 @@ You will get a CSV file containting 4 columns:
  - "Timestamp" - full date and time when a sample was taken;
  - "SpO2" - oxygen saturation value;
  - "PR" - pulse rate;
- - 
+
 Field separator used is ";".
 
 If you have Microsoft Office 2010 or above then it is reccomended to use LibreOffice as it allows you to choose appropriate field separator and column format.
@@ -66,4 +67,4 @@ You will also get a PNG picture for each recording session named "plot1.png" to 
 
 If you want smoother graphics with anti-aliasing enable you can open "csv_graph.R" file and replace the line ```use_Cairo = FALSE``` with ```use_Cairo = TRUE``` and run "csv_graph.R" script again to see if the results are more appealing.
 
-All of that should be enough to compose your report.
+The files should be enough to compose your report.
