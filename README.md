@@ -1,6 +1,6 @@
 # OxyWitleaf2CSV <img src="./README_md_pictures/witleaf.png"  align="right" height="138" />
 
-The simple program is a Witleaf handheld pulse oxymeter BIN file format data decoder. It reads BIN-files produced by popular professional pulse oxymeters manufactured by Shenzhen Witleaf Medical Electronics Co., Ltd. (like the WIT-S300 shown on the photo above) and produces a CSV-formatted output with the extracted data to stdout (gets printed to the console if not directed otherwise).
+The simple program is a Witleaf handheld pulse oxymeter BIN file format data decoder. It reads BIN-files produced by popular professional pulse oxymeters manufactured by Shenzhen Witleaf Medical Electronics Co., Ltd. (like the WIT-S300 shown in the photo above) and produces a CSV-formatted output with the extracted data to stdout (gets printed to the console if not directed otherwise).
 
 ## Requirements
  - [Digital Mars D compiler (DMD)](https://dlang.org/download.html) - required to build the BNI->CSV converter itself.
@@ -20,7 +20,7 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
   ```
   - If you use Windows:
 
-  Execute `build_win.bat` file. 
+  Execute the `build_win.bat` file. 
     
 ## Usage
  1) Set up your pulse oxymeter. Don't forget to set a correct date and time as it will be used as timestamps for the data samples and some patient name as it will name a file you will use later on.
@@ -30,7 +30,7 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
     
    - If you use Linux or some other UNIX-like OS:
 
-  Open a system shell in the OxyWitleaf2CSV project directory and enter the following command replacing "patient_name" with your BIN-file name:
+  Open a system shell in the OxyWitleaf2CSV project directory and enter the following command, replacing "patient_name" with your BIN-file name:
    
   ``` bash
   ./oxywitleaf2csv -H -f patient_name.bin > patient_name.csv
@@ -39,32 +39,32 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
     
    - If you use Windows: 
   
-  Rename the file you just got from the devie to `patient.bin` and execute `process.bat` file. 
+  Rename the file you just got from the devie to `patient.bin` and execute the `process.bat` file. 
   
-  Then open "R Console" and set current directory to your OxyWitleaf2CSV project directory using the top menu or "setwd()" function. 
+  Then open "R Console" and set the current directory to your OxyWitleaf2CSV project directory using the top menu or "setwd()" function. 
   
   Enter the following command into the console:
   ``` R
   input_file = "patient.csv"
   ```
-  Open `csv_graph.R` file and select "Execute all" from the "Edit" menu.
+  Open the `csv_graph.R` file and select "Execute all" from the "Edit" menu.
   
  5) Enjoy :).
 
-You will get a CSV file containting 4 columns:
+You will get a CSV file containing 4 columns:
  - "Section" - recording session number;
  - "Timestamp" - full date and time when a sample was taken;
  - "SpO2" - oxygen saturation value;
  - "PR" - pulse rate;
 
-Field separator used is ";".
+The field separator used is ";".
 
-If you have Microsoft Office 2010 or above then it is reccomended to use LibreOffice as it allows you to choose appropriate field separator and column format.
+If you have Microsoft Office 2010 or above, then it is recommended to use LibreOffice as it allows you to choose an appropriate field separator and column format.
 
-You will also get a PNG picture for each recording session named "plot1.png" to "plotN.png" where "N" is the number of recordinga available in the BIN file. Each picture will look somewhat like this:
+You will also get a PNG picture for each recording session named "plot1.png" to "plotN.png" where "N" is the number of recordings available in the BIN file. Each picture will look somewhat like this:
 
 <div><img src="./README_md_pictures/example_plot.png" width="800em" ></img></div>
 
-If you want smoother graphics with anti-aliasing enable you can open "csv_graph.R" file and replace the line ```use_Cairo = FALSE``` with ```use_Cairo = TRUE``` and run "csv_graph.R" script again to see if the results are more appealing.
+If you want smoother graphics with anti-aliasing enabled you can open the "csv_graph.R" file and replace the line ```use_Cairo = FALSE``` with ```use_Cairo = TRUE``` and run the "csv_graph.R" script again to see if the results are more appealing.
 
 The files should be enough to compose your report.
