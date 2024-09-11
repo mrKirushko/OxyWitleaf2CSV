@@ -55,6 +55,7 @@ You will get a CSV file containting 4 columns:
  - "Timestamp" - full date and time when a sample was taken;
  - "SpO2" - oxygen saturation value;
  - "PR" - pulse rate;
+ - 
 Field separator used is ";".
 
 If you have Microsoft Office 2010 or above then it is reccomended to use LibreOffice as it allows you to choose appropriate field separator and column format.
