@@ -22,7 +22,9 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
   - If you use Windows:
 
   Execute the `build_win.bat` file. 
-    
+
+3) If you want to create plots like the one shown on the picture near the bottom of the page then install R as well.
+ 
 ## Usage
  1) Set up your pulse oxymeter. Don't forget to set a correct date and time as it will be used as timestamps for the data samples and some patient name as it will name a file you will use later on.
  2) Record some data at any sample period you want.
