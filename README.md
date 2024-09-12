@@ -56,7 +56,7 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
 
 You will get a CSV file containing 4 columns:
  - "Section" - recording session number;
- - "Timestamp" - full date and time when a sample was taken;
+ - "Timestamp" - full date and time when a sample was taken (ISO 8601 "extended" timestamp format is used);
  - "SpO2" - oxygen saturation value;
  - "PR" - pulse rate;
 
