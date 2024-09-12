@@ -11,7 +11,7 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
 
 ## Preparing for use
 1) Install DMD according to your OS or system package manager instructions;
-2) Compile OxyWitleaf2CSV from the source file.
+2) Compile OxyWitleaf2CSV from the source file:
    
   - If you use Linux or some other UNIX-like OS:
   
@@ -28,8 +28,9 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
 ## Usage
  1) Set up your pulse oxymeter. Don't forget to set a correct date and time as it will be used as timestamps for the data samples and some patient name as it will name a file you will use later on.
  2) Record some data at any sample period you want.
- 3) Connect the device to your PC using the included MiniUSB <-> USB-A cable (the device will be detected as a general file storage) and copy a BIN-file with the name corresponding to the "patient's name" set up previously to the directory containing OxyWitleaf2CSV project files.
- 4) Process the file using OxyWitleaf2CSV.
+ 3) Connect the device to your PC using the included MiniUSB <-> USB-A cable (the device will be detected as a general file storage).
+ 4) Copy a BIN-file with the name corresponding to the "patient's name" set up previously to the directory containing OxyWitleaf2CSV project files.
+ 5) Process the file using OxyWitleaf2CSV:
     
    - If you use Linux or some other UNIX-like OS:
 
