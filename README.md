@@ -10,7 +10,7 @@ The simple program is a Witleaf handheld pulse oxymeter BIN file format data dec
 All the required R dependancies (`plotrix` and `Cairo`) should get downloaded and installed automatically.
 
 ## Preparing for use
-1) Install DMD according to your OS or system package manager instructions.
+1) Install [DMD](https://dlang.org/download.html) according to your OS or system package manager instructions.
 2) Compile OxyWitleaf2CSV from the source file:
    
   - If you use Linux or some other UNIX-like OS:
@@ -23,7 +23,7 @@ All the required R dependancies (`plotrix` and `Cairo`) should get downloaded an
 
   Execute the `build_win.bat` file. 
 
-3) If you want to create plots like the one shown on the picture near the bottom of the page then install R as well.
+3) If you want to create plots like the one shown on the picture near the bottom of the page then install [R](https://www.r-project.org/) as well.
  
 ## Usage
  1) Set up your pulse oxymeter. Don't forget to set a correct date and time as it will be used as timestamps for the data samples and some patient name as it will name a file you will use later on.
