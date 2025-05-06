@@ -34,7 +34,6 @@ int main(string[] args)
         SetConsoleCP(65001);
         SetConsoleOutputCP(65001);
         // Rename console title for convenience
-        import core.sys.windows.wincon;
         import std.conv : wtext;
         SetConsoleTitle(wtext(PROGRAM_NAME~" - v"~PROGRAM_VERSION).ptr);
     }
@@ -92,7 +91,6 @@ int main(string[] args)
         char[12] ID;
         if ((input_file.rawRead(ID)).length != ID.length)
             throw new Exception("Input file header read error!");
-        import std.algorithm.comparison : cmp;
         if (ID != FILE_ID) throw new Exception("Incorrect input file header!");
 
         // -- Metadata --
@@ -133,8 +131,7 @@ int main(string[] args)
         if (print_header) {
             import std.conv : hexString;
             static immutable string UTF8_BOM = hexString!"EFBBBF";
-            // BOM is required by M$ Excel and many other
-            // Windows programs when UTF8 is used.
+            // BOM is required by M$ Excel and many other Windows programs when UTF8 is used.
             writeln(UTF8_BOM~"Section;Timestamp;SpO2;PR");
         }
         while (!input_file.eof) {
